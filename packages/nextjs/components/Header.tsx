@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { RainbowKitCustomConnectButton } from "./scaffold-eth";
 
 /**
  * Site header
@@ -67,9 +68,8 @@ export const Header = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn btn-outline btn-primary mx-2">Log in</a>
-        <a className="btn btn-primary">Sign up</a>
+      <div className="navbar-end z-10">
+        <RainbowKitCustomConnectButton />
       </div>
     </div>
   );
