@@ -10,8 +10,8 @@ const baseUrl = process.env.VERCEL_URL
 const imageUrl = `${baseUrl}/thumbnail.jpg`;
 
 const title = "TokenEstate";
-const titleTemplate = "%s | Scaffold-ETH 2";
-const description = "Built with 🏗 Scaffold-ETH 2";
+const titleTemplate = "%s | TokenEstate";
+const description = "TokenEstate";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

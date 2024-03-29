@@ -40,7 +40,9 @@ export const Header = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">TokenEstate</a>
+        <a className="btn btn-ghost text-xl">
+          <img src="/logo.svg" alt="TokenEstate logo" />
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -66,7 +68,7 @@ export const Header = () => {
       </div>
       <div className="navbar-end">
         <a className="btn btn-outline btn-primary">Log in</a>
-        <a className="btn btn-active btn-primary">Sign up</a>
+        <a className="btn btn-primary">Sign up</a>
       </div>
     </div>
   );
