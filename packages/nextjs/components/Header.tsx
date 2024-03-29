@@ -19,7 +19,7 @@ export const Header = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </div>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 w-52">
             <li>
               <a href="/">Home</a>
             </li>
@@ -50,24 +50,24 @@ export const Header = () => {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="">About Us</a>
+            <a href="/#about">About Us</a>
           </li>
           <li>
-            <a href="">How it works</a>
+            <a href="/#howitworks">How it works</a>
           </li>
           <li>
-            <a href="">Listings</a>
+            <a href="/#listings">Listings</a>
           </li>
           <li>
-            <a href="">FAQ</a>
+            <a href="/#faq">FAQ</a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a href="/#contact">Contact</a>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-outline btn-primary">Log in</a>
+        <a className="btn btn-outline btn-primary mx-2">Log in</a>
         <a className="btn btn-primary">Sign up</a>
       </div>
     </div>
