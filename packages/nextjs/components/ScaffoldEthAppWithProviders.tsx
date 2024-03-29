@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Drawer from "./Drawer";
 import { RainbowKitProvider, darkTheme, lightTheme } from "@rainbow-me/rainbowkit";
 import { useTheme } from "next-themes";
 import { Toaster } from "react-hot-toast";
@@ -28,9 +27,6 @@ const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <div className="flex flex-row min-h-screen">
-        <div>
-          <Drawer />
-        </div>
         <div className="flex flex-col min-h-screen flex-1">
           <Header />
           <main className="relative flex flex-col flex-1">{children}</main>
