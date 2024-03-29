@@ -1,109 +1,65 @@
-"use client";
-
-import React, { useCallback, useRef, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
-import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
-import { useOutsideClick } from "~~/hooks/scaffold-eth";
-
-type HeaderMenuLink = {
-  label: string;
-  href: string;
-  icon?: React.ReactNode;
-};
-
-export const menuLinks: HeaderMenuLink[] = [
-  {
-    label: "Home",
-    href: "/",
-  },
-  {
-    label: "Debug Contracts",
-    href: "/debug",
-    icon: <BugAntIcon className="h-4 w-4" />,
-  },
-];
-
-export const HeaderMenuLinks = () => {
-  const pathname = usePathname();
-
-  return (
-    <>
-      {menuLinks.map(({ label, href, icon }) => {
-        const isActive = pathname === href;
-        return (
-          <li key={href}>
-            <Link
-              href={href}
-              passHref
-              className={`${
-                isActive ? "bg-secondary shadow-md" : ""
-              } hover:bg-secondary hover:shadow-md focus:!bg-secondary active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col`}
-            >
-              {icon}
-              <span>{label}</span>
-            </Link>
-          </li>
-        );
-      })}
-    </>
-  );
-};
+import React from "react";
 
 /**
  * Site header
  */
 export const Header = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const burgerMenuRef = useRef<HTMLDivElement>(null);
-  useOutsideClick(
-    burgerMenuRef,
-    useCallback(() => setIsDrawerOpen(false), []),
-  );
-
   return (
-    <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2">
-      <div className="navbar-start w-auto lg:w-1/2">
-        <div className="lg:hidden dropdown" ref={burgerMenuRef}>
-          <label
-            tabIndex={0}
-            className={`ml-1 btn btn-ghost ${isDrawerOpen ? "hover:bg-secondary" : "hover:bg-transparent"}`}
-            onClick={() => {
-              setIsDrawerOpen(prevIsOpenState => !prevIsOpenState);
-            }}
-          >
-            <Bars3Icon className="h-1/2" />
-          </label>
-          {isDrawerOpen && (
+    <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 shadow-secondary px-0 sm:px-2">
+      <div className="navbar bg-base-100">
+        <div className="flex-1">
+          <div className="form-control">
+            <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-96" />
+          </div>
+        </div>
+        <div className="flex-none gap-2">
+          <button className="btn btn-ghost btn-circle">
+            <div className="indicator">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                />
+              </svg>
+              <span className="badge badge-xs badge-primary indicator-item"></span>
+            </div>
+          </button>
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-              onClick={() => {
-                setIsDrawerOpen(false);
-              }}
+              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
             >
-              <HeaderMenuLinks />
+              <li>
+                <a className="justify-between">
+                  Profile
+                  <span className="badge">New</span>
+                </a>
+              </li>
+              <li>
+                <a>Settings</a>
+              </li>
+              <li>
+                <a>Logout</a>
+              </li>
             </ul>
-          )}
+          </div>
         </div>
-        <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
-          <div className="flex relative w-10 h-10">
-            <Image alt="SE2 logo" className="cursor-pointer" fill src="/logo.svg" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-bold leading-tight">Scaffold-ETH</span>
-            <span className="text-xs">Ethereum dev stack</span>
-          </div>
-        </Link>
-        <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">
-          <HeaderMenuLinks />
-        </ul>
-      </div>
-      <div className="navbar-end flex-grow mr-4">
-        <RainbowKitCustomConnectButton />
-        <FaucetButton />
       </div>
     </div>
   );
