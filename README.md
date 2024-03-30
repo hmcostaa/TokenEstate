@@ -1,4 +1,16 @@
-# 🏗 Scaffold-ETH 2
+# 🏠 Token Estate
+
+TokenEstate is a revolutionary web3 platform designed to democratize real estate investment through blockchain technology. It enables the tokenization of abandoned and underutilized properties, allowing anyone to invest in real estate projects with transparency and security. By investing, users receive security tokens representing ownership shares, which entitle them to a portion of the rental income once the property is renovated and leased.
+
+![image](https://github.com/hmcostaa/TokenEstate/assets/4332567/18a17d80-a41b-40f6-962b-f422abdf1c5b)
+
+
+### Tech Stack
+
+- [scaffoldeth.io](https://scaffoldeth.io/)
+- [request.network](https://request.network/) 
+- [greenfield.bnbchain.org](https://greenfield.bnbchain.org/en) - On branch https://github.com/hmcostaa/TokenEstate/tree/bnb-greenfield
+
 
 <h4 align="center">
   <a href="https://docs.scaffoldeth.io">Documentation</a> |
@@ -15,7 +27,6 @@
 - 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
 - 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
 
 ## Requirements
 
