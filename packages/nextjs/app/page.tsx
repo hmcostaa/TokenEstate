@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import oldLisbon from "~~/public/Lisbon/old_lisbon.png"
 
 const Home: NextPage = () => {
   return (
@@ -23,18 +22,18 @@ const Home: NextPage = () => {
               <div>
                 <h2 className="text-4xl font-bold">What is TokenEstate?</h2>
                 <p className="py-6">Brief explanation of the platform&apos;s purpose, highlighting the democratization of real estate investment through blockchain technology.</p>
-                <div className="text-center">
+                <div className="float-right">
                   <Image src="/chart.png" className="max-w-sm rounded-lg shadow-2xl" width={500} height={300} alt="chart"/>
                 </div>
               </div>
             </div>
           </div>
 
-          <section className="my-20">
+          <section id="howitworks" className="my-14">
             <div className="container mx-auto">
               <h2 className="text-5xl font-bold">How it works?</h2>
 
-              <div className="flex flex-row">
+              <div className="flex flex-row justify-between gap-2">
                 <div className="card bg-base-100 shadow-xl mx-1">
                   <div className="card-body">
                     <h2 className="card-title text-3xl font-bold">Choose Your Property</h2>
@@ -65,38 +64,39 @@ const Home: NextPage = () => {
               </div>
             </div>
           </section>
-          <div className="flex flex-row py-6 gap-10">
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-              <figure><Image src={oldLisbon} alt="Shoes" /></figure>
-              <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Buy Now</button>
+
+
+          <section id="listings" className="my-14">
+            <div className="container mx-auto">
+              <h2 className="text-5xl font-bold">Featured Properties</h2>
+
+              <div className="flex flex-row justify-between gap-6">
+                <div className="card bg-primary text-neutral-content shadow-xl">
+                  <figure><img src="/Lisbon/old_lisbon.png" alt="Lisbon" /></figure>
+                  <div className="card-body">
+                    <h4 className="card-title text-2xl font-bold">Historic Gem</h4>
+                    <span className="text-sm">Lisbon, ortugal</span>
+                  </div>
+                </div>
+
+                <div className="card bg-primary text-neutral-content shadow-xl">
+                  <figure><img src="/bucharest.png" alt="Bucharest" /></figure>
+                  <div className="card-body">
+                    <h4 className="card-title text-2xl font-bold">Art Deco</h4>
+                    <span className="text-sm">Bucharest, Romania</span>
+                  </div>
+                </div>
+
+                <div className="card bg-primary text-neutral-content shadow-xl">
+                  <figure><img src="/coming_soon.png" alt="Shoes" /></figure>
+                  <div className="card-body">
+                    <h4 className="card-title text-2xl font-bold">Castle in France</h4>
+                    <span className="text-sm">Paris, France</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-              <figure><Image src={oldLisbon} alt="Shoes" /></figure>
-              <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Buy Now</button>
-                </div>
-              </div>
-            </div>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-              <figure><Image src={oldLisbon} alt="Shoes" /></figure>
-              <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Buy Now</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          </section>
       </div>
     </>
   );
