@@ -88,7 +88,12 @@ const Home: NextPage = () => {
                 </div>
 
                 <div className="card bg-primary text-neutral-content shadow-xl">
-                  <figure><img src="/coming_soon.png" alt="Shoes" /></figure>
+                  <figure style={{ position: 'relative' }}>
+                    <img src="/coming_soon.png" alt="castle in paris" className="image-full" />
+                    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(100, 105, 116, 0.8)' }}>
+                      <p style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '1.5rem', color: 'white' }}>Coming soon</p>
+                    </div>
+                  </figure>
                   <div className="card-body">
                     <h4 className="card-title text-2xl font-bold">Castle in France</h4>
                     <span className="text-sm">Paris, France</span>
