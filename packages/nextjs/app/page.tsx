@@ -75,7 +75,7 @@ const Home: NextPage = () => {
                   <figure><img src="/Lisbon/old_lisbon.png" alt="Lisbon" /></figure>
                   <div className="card-body">
                     <h4 className="card-title text-2xl font-bold">Historic Gem</h4>
-                    <span className="text-sm">Lisbon, Portugal</span>
+                    <span className="text-sm">📌Lisbon, Portugal</span>
                     <span className="text-sm">Invest in reviving a piece of
 history. Anticipated 7% annual ROI.</span>
 
@@ -87,7 +87,7 @@ history. Anticipated 7% annual ROI.</span>
                   <figure><img src="/bucharest.png" alt="Bucharest" /></figure>
                   <div className="card-body">
                     <h4 className="card-title text-2xl font-bold">Art Deco</h4>
-                    <span className="text-sm">Bucharest, Romania</span>
+                    <span className="text-sm">📌Bucharest, Romania</span>
                     <span className="text-sm">Transform and profit from an architectural masterpiece. Expected 8% annual ROI.</span>
 
                     <button className="btn btn-sm btn-wide btn-white mt-auto">More details</button>
@@ -103,7 +103,7 @@ history. Anticipated 7% annual ROI.</span>
                   </figure>
                   <div className="card-body">
                     <h4 className="card-title text-2xl font-bold">Castle in France</h4>
-                    <span className="text-sm">Paris, France</span>
+                    <span className="text-sm">📌Paris, France</span>
                     <span className="text-sm">New object coming soon.</span>
 
                     <button className="btn btn-sm btn-wide btn-white mt-auto">More details</button>
