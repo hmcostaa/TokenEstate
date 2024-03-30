@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Table = () => {
@@ -10,7 +11,9 @@ const Table = () => {
             <th></th>
             <th>Certificate</th>
             <th>ROI</th>
-            <th>Withdrawn</th>
+            <th>Price</th>
+            <th className="text-center">Num of Tokens</th>
+            <th>Monthly Dividend</th>
             <th></th>
           </tr>
         </thead>
@@ -40,9 +43,11 @@ const Table = () => {
               <br />
               <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
             </td>
-            <td>Purple</td>
+            <td>$5,000</td>
+            <td className="text-center">8</td>
+            <td>$1,250</td>
             <th>
-              <button className="btn btn-secondary">View Details</button>
+            <Link href={`/property/${1}`} className="btn btn-secondary">View Details</Link>
             </th>
           </tr>
           {/* row 2 */}
@@ -70,9 +75,11 @@ const Table = () => {
               <br />
               <span className="badge badge-ghost badge-sm">Tax Accountant</span>
             </td>
-            <td>Red</td>
+            <td>$125,000</td>
+            <td className="text-center">3</td>
+            <td>$12,500</td>
             <th>
-              <button className="btn btn-secondary">View Details</button>
+            <Link href={`/property/${2}`} className="btn btn-secondary">View Details</Link>
             </th>
           </tr>
           {/* row 3 */}
@@ -100,9 +107,11 @@ const Table = () => {
               <br />
               <span className="badge badge-ghost badge-sm">Office Assistant I</span>
             </td>
-            <td>Crimson</td>
+            <td>$25,000</td>
+            <td className="text-center">1</td>
+            <td>$2,500</td>
             <th>
-              <button className="btn btn-secondary">View Details</button>
+              <Link href={`/property/${3}`} className="btn btn-secondary">View Details</Link>
             </th>
           </tr>
           {/* row 4 */}
@@ -130,9 +139,11 @@ const Table = () => {
               <br />
               <span className="badge badge-ghost badge-sm">Community Outreach Specialist</span>
             </td>
-            <td>Indigo</td>
+            <td>$75,000</td>
+            <td className="text-center">5</td>
+            <td>$5,000</td>
             <th>
-              <button className="btn btn-secondary">View Details</button>
+            <Link href={`/property/${4}`} className="btn btn-secondary">View Details</Link>
             </th>
           </tr>
         </tbody>
@@ -142,7 +153,9 @@ const Table = () => {
             <th></th>
             <th>Certificate</th>
             <th>ROI</th>
-            <th>Withdrawn</th>
+            <th>Price</th>
+            <th className="text-center">Num of Tokens</th>
+            <th>Monthly Dividend</th>
             <th></th>
           </tr>
         </tfoot>

@@ -23,22 +23,22 @@ export const Header = () => {
           </div>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 w-52">
             <li>
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="">About Us</a>
+              <Link href="about">About Us</Link>
             </li>
             <li>
-              <a href="">How it works</a>
+              <Link href="howitworks">How it works</Link>
             </li>
             <li>
-              <a href="">Listings</a>
+              <Link href="listings">Listings</Link>
             </li>
             <li>
-              <a href="">FAQ</a>
+              <Link href="faq">FAQ</Link>
             </li>
             <li>
-              <a href="">Contact</a>
+              <Link href="contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -49,22 +49,22 @@ export const Header = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <a href="/#about">About Us</a>
+            <Link href="/about">About Us</Link>
           </li>
           <li>
-            <a href="/#howitworks">How it works</a>
+            <Link href="/howitworks">How it works</Link>
           </li>
           <li>
-            <a href="/#listings">Listings</a>
+            <Link href="/listings">Listings</Link>
           </li>
           <li>
-            <a href="/#faq">FAQ</a>
+            <Link href="/faq">FAQ</Link>
           </li>
           <li>
-            <a href="/#contact">Contact</a>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>

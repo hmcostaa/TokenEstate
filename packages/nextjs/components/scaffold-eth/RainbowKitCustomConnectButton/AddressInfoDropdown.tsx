@@ -15,6 +15,7 @@ import {
 import { BlockieAvatar, isENS } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 import { getTargetNetworks } from "~~/utils/scaffold-eth";
+import Link from "next/link";
 
 const allowedNetworks = getTargetNetworks();
 
@@ -59,6 +60,9 @@ export const AddressInfoDropdown = ({
           className="dropdown-content menu z-[2] p-2 mt-2 shadow-center shadow-accent bg-base-200 rounded-box gap-1"
         >
           <NetworkOptions hidden={!selectingNetwork} />
+          <li className={selectingNetwork ? "hidden" : ""}>
+            <Link href={`/profile/${address}`}>Profile</Link>
+          </li>
           <li className={selectingNetwork ? "hidden" : ""}>
             {addressCopied ? (
               <div className="btn-sm !rounded-xl flex gap-3 py-3">
