@@ -142,34 +142,35 @@ const RequestForm: NextPage = () => {
 
   return (
     <>
-      <div className="flex items-center flex-col flex-grow pt-10 bg-white">
+      <div className="flex items-center flex-col flex-grow pt-10 bg-white w-full">
         <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Amount"
-            onChange={e => setExpectedAmount(e.target.value)}
-            className="input input-bordered w-full max-w-xs"
-          />
-          <input
-            type="text"
-            placeholder="Recipient"
-            onChange={e => setPaymentRecipient(e.target.value)}
-            className="input input-bordered w-full max-w-xs"
-          />
+          <div className="flex flex-row flex-grow w-full gap-6 my-6">
+            <input
+              type="text"
+              placeholder="Amount"
+              onChange={e => setExpectedAmount(e.target.value)}
+              className="input input-bordered w-full max-w-xs"
+              />
+            <input
+              type="text"
+              placeholder="Recipient"
+              onChange={e => setPaymentRecipient(e.target.value)}
+              className="input input-bordered w-full max-w-xs"
+              />
+          </div>
           <input
             type="text"
             placeholder="Reason"
             onChange={e => setReason(e.target.value)}
             className="input input-bordered w-full max-w-xs"
           />
-          <button className="btn btn-primary" type="submit" disabled={!canSubmit}>
+          <button className="btn btn-primary text-white mx-6" type="submit" disabled={!canSubmit}>
             Create Request
           </button>
         </form>
         <p>App status: {status}</p>
         <p>Request data:</p>
         <pre>{JSON.stringify(requestData, undefined, 2)}</pre>
-        <FaucetButton />
       </div>
     </>
   );

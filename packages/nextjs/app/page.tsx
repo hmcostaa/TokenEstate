@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -79,7 +80,7 @@ const Home: NextPage = () => {
                     <span className="text-sm">Invest in reviving a piece of
 history. Anticipated 7% annual ROI.</span>
 
-                    <button className="btn btn-sm btn-wide btn-white mt-auto">More details</button>
+                    <Link href="property/1" className="btn btn-sm btn-wide btn-white mt-auto">More details</Link>
                   </div>
                 </div>
 
@@ -90,7 +91,7 @@ history. Anticipated 7% annual ROI.</span>
                     <span className="text-sm">📌Bucharest, Romania</span>
                     <span className="text-sm">Transform and profit from an architectural masterpiece. Expected 8% annual ROI.</span>
 
-                    <button className="btn btn-sm btn-wide btn-white mt-auto">More details</button>
+                    <Link href="property/2" className="btn btn-sm btn-wide btn-white mt-auto">More details</Link>
                   </div>
                 </div>
 
