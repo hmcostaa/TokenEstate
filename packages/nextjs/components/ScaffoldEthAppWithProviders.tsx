@@ -55,34 +55,36 @@ const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
           </div>
 
           <section className="my-20">
-            <h2 className="text-5xl font-bold">How it works?</h2>
+            <div class="container mx-auto">
+              <h2 className="text-5xl font-bold">How it works?</h2>
 
-            <div className="flex flex-row mx-20 ">
-              <div className="card bg-base-100 shadow-xl mx-1">
-                <div className="card-body">
-                  <h2 className="card-title text-3xl font-bold">Choose Your Property</h2>
-                  <p className="text-sm">Conduct thorough research on various properties, considering factors like location, market trends, and amenities to align with your investment goals.</p>
+              <div className="flex flex-row">
+                <div className="card bg-base-100 shadow-xl mx-1">
+                  <div className="card-body">
+                    <h2 className="card-title text-3xl font-bold">Choose Your Property</h2>
+                    <p className="text-sm">Conduct thorough research on various properties, considering factors like location, market trends, and amenities to align with your investment goals.</p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="card bg-primary text-primary-content shadow-xl">
-                <div className="card-body">
-                  <h2 className="card-title text-3xl font-bold">Invest Securely</h2>
-                  <p className="text-sm">Explore financing options that suit your financial situation and minimize risk, ensuring you choose the most secure method for funding your property investment.</p>
+                <div className="card bg-primary text-neutral-content shadow-xl">
+                  <div className="card-body">
+                    <h2 className="card-title text-3xl font-bold">Invest Securely</h2>
+                    <p className="text-sm">Explore financing options that suit your financial situation and minimize risk, ensuring you choose the most secure method for funding your property investment.</p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="card bg-base-100 shadow-xl mx-1">
-                <div className="card-body">
-                  <h2 className="card-title text-3xl font-bold">Earn Rental Income</h2>
-                  <p className="text-sm">Develop effective marketing strategies to attract tenants, screen them rigorously, and establish comprehensive lease agreements to ensure stable rental income.</p>
+                <div className="card bg-base-100 shadow-xl mx-1">
+                  <div className="card-body">
+                    <h2 className="card-title text-3xl font-bold">Earn Rental Income</h2>
+                    <p className="text-sm">Develop effective marketing strategies to attract tenants, screen them rigorously, and establish comprehensive lease agreements to ensure stable rental income.</p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="card bg-base-100 shadow-xl mx-1">
-                <div className="card-body">
-                  <h2 className="card-title text-3xl font-bold">Vote on Property Decisions</h2>
-                  <p className="text-sm">Engage actively with other stakeholders, participate in decision-making processes through meetings or consultations, and understand your legal rights and obligations as a property owner.</p>
+                <div className="card bg-base-100 shadow-xl mx-1">
+                  <div className="card-body">
+                    <h2 className="card-title text-3xl font-bold">Vote on Property Decisions</h2>
+                    <p className="text-sm">Engage actively with other stakeholders, participate in decision-making processes through meetings or consultations, and understand your legal rights and obligations as a property owner.</p>
+                  </div>
                 </div>
               </div>
             </div>
